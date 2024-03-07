@@ -1,0 +1,29 @@
+Weights
+AB, CI, FG - 1
+AE, BD, CH, FK - 2
+ED, BG, CJ, HK -3
+DG, IJ - 4
+AD, BH, HJ, JK, DF - 5
+BC - 6
+GH - 7
+
+AB, CI, FG - 3 1's added   = 1 x 3 = 3
+ABE, CI, FG  - AE added = 2
+ABED, CI, FG - BD added = 2
+ABED, CHI, FG - CH added = 2
+ABED, CHI, FGK - FK added = 2
+ED not added 
+ABEDFGK, CHI - BG added = 3
+ABEDFGK, CHIJ - CJ added = 3
+ABEDFGKCHIJ - HK added = 3
+DG not added
+IJ not added
+AD not added
+BH not added
+HJ not added
+JK not added
+DF not added
+BC not added
+GH not added
+
+MST = 20

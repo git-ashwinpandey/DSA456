@@ -1,0 +1,85 @@
+Start from A; T = {}
+B, A-1
+D, A-5
+E, A-2
+
+#AB added; T = {{A,B}}
+
+D, A-5
+E, A-2
+C, B-6
+H, B-5
+G, B-3
+D, B-2
+
+# remove D, A because going through B is lower.
+#EA added; T = {{A,B}, {A,E}}
+
+C, B-6
+H, B-5
+G, B-3
+D, B-2
+D, E-3
+
+# remove ED because BD is lower
+# BD added; T = {{A,B}, {A,E}, {B, D}}
+
+C, B-6
+H, B-5
+G, B-3
+G, D-4
+F, D-5
+
+# remove G, D because GB is lower
+# BG added; T = {{A,B}, {A,E}, {B, D}, {B, G}}
+
+C, B-6
+H, B-5
+F, D-5
+F, G-1
+H, G-7
+D, G-4
+
+#remove F, D because FG is lower. #remove H, G because H, B is lower
+#FG added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}}
+
+C, B-6
+H, B-5
+D, G-4
+D, F-5
+K, F-2
+
+#remove DF because D, G is lower.
+#FK added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}, {F,K}}
+
+C, B-6
+H, B-5
+D, F-5
+H, K-3
+J, K-5
+
+#remove H, B because HK is lower.
+#KH added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}, {F,K}, {K, H}}
+
+C, B-6
+J, K-5
+C, H-2
+J, H-5
+
+#remove C, B because CH is lower
+#CH added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}, {F,K}, {K, H}, {C,H}}
+
+J, K-5
+J, H-5
+B, C-6
+I, C-1
+J, C-3
+
+#remove J, K & J, H because JC is lower. #remove B, C because B,H is lower
+#CI added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}, {F,K}, {K, H}, {C,H}, {C,I}}
+
+J, C-3
+J, I-4
+
+#remove JI because JC is lower
+#CJ added; T = {{A,B}, {A,E}, {B, D}, {B, G}, {F,G}, {F,K}, {K, H}, {C,H}, {C,I}, {C,J}}
